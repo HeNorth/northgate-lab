@@ -331,6 +331,12 @@ const content = {
   },
 };
 
+const projectLinks = [
+  "projects/liar-room",
+  "projects/mard-bead-generator",
+  "projects/travel-planner",
+];
+
 export default function Home() {
   const [lang, setLang] = useState<Lang>("zh");
   const t = content[lang];
@@ -820,6 +826,7 @@ export default function Home() {
           <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {t.projects.map((project, index) => {
               const meta = projectMeta[index];
+              const detailLink = projectLinks[index];
 
               return (
                 <article
@@ -889,21 +896,12 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6">
-                      {index === 0 ? (
-                        <a
-                          href="projects/liar-room"
-                          className="block w-full rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3 text-center font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
-                        >
-                          {lang === "zh" ? "打开副本档案" : "Open Case File"}
-                        </a>
-                      ) : (
-                        <button
-                          type="button"
-                          className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 font-semibold text-zinc-400"
-                        >
-                          {lang === "zh" ? "档案整理中" : "File Pending"}
-                        </button>
-                      )}
+                      <a
+                        href={detailLink}
+                        className="block w-full rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3 text-center font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
+                      >
+                        {lang === "zh" ? "打开副本档案" : "Open Case File"}
+                      </a>
                     </div>
                   </div>
                 </article>

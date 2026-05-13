@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Lang = "zh" | "en";
@@ -332,9 +333,9 @@ const content = {
 };
 
 const projectLinks = [
-  "projects/liar-room",
-  "projects/mard-bead-generator",
-  "projects/travel-planner",
+  "/projects/liar-room",
+  "/projects/mard-bead-generator",
+  "/projects/travel-planner",
 ];
 
 export default function Home() {
@@ -448,7 +449,8 @@ export default function Home() {
             status: "UNLOCKED",
             role: "Product Planning / Interaction",
             progress: 42,
-            recommend: "Requirement Analysis / Travel Planning / AI Interaction",
+            recommend:
+              "Requirement Analysis / Travel Planning / AI Interaction",
             reward: "Product prototype design EXP",
             tags: [
               "Travel Planning",
@@ -615,7 +617,11 @@ export default function Home() {
 
             <nav className="hidden gap-6 text-sm text-zinc-300 md:flex">
               {t.nav.map((item) => (
-                <a key={item.href} href={item.href} className="hover:text-white">
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="hover:text-white"
+                >
                   {item.label}
                 </a>
               ))}
@@ -770,9 +776,7 @@ export default function Home() {
                     : "Game Developer / 3D Modeler"}
                 </p>
 
-                <p className="mt-6 leading-8 text-zinc-300">
-                  {t.profileIntro}
-                </p>
+                <p className="mt-6 leading-8 text-zinc-300">{t.profileIntro}</p>
 
                 <div className="mt-8 space-y-3">
                   {t.profileItems.map((item) => (
@@ -832,9 +836,7 @@ export default function Home() {
         <section id="projects" className="mx-auto max-w-7xl px-6 py-24">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="font-mono text-sm text-cyan-300">
-                {t.projectsSub}
-              </p>
+              <p className="font-mono text-sm text-cyan-300">{t.projectsSub}</p>
               <h2 className="mt-3 text-4xl font-black">{t.projectsTitle}</h2>
             </div>
 
@@ -871,9 +873,7 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <p className="mt-4 text-sm text-zinc-400">
-                      {project.type}
-                    </p>
+                    <p className="mt-4 text-sm text-zinc-400">{project.type}</p>
 
                     <p className="mt-4 min-h-28 leading-7 text-zinc-300">
                       {project.desc}
@@ -891,7 +891,9 @@ export default function Home() {
                     <div className="mt-4 grid gap-3">
                       <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
                         <p className="font-mono text-xs text-zinc-500">
-                          {lang === "zh" ? "RECOMMENDED SKILLS / 推荐能力" : "RECOMMENDED SKILLS"}
+                          {lang === "zh"
+                            ? "RECOMMENDED SKILLS / 推荐能力"
+                            : "RECOMMENDED SKILLS"}
                         </p>
                         <p className="mt-2 text-sm font-semibold text-cyan-100">
                           {meta.recommend}
@@ -900,7 +902,9 @@ export default function Home() {
 
                       <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
                         <p className="font-mono text-xs text-zinc-500">
-                          {lang === "zh" ? "DROP REWARD / 掉落奖励" : "DROP REWARD"}
+                          {lang === "zh"
+                            ? "DROP REWARD / 掉落奖励"
+                            : "DROP REWARD"}
                         </p>
                         <p className="mt-2 text-sm font-semibold text-lime-100">
                           {meta.reward}
@@ -936,12 +940,12 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6">
-                      <a
+                      <Link
                         href={detailLink}
                         className="block w-full rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3 text-center font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
                       >
                         {lang === "zh" ? "进入副本档案" : "Enter Case File"}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </article>
@@ -960,9 +964,7 @@ export default function Home() {
               <h2 className="mt-3 text-4xl font-black">{t.skillsTitle}</h2>
             </div>
 
-            <p className="max-w-xl leading-7 text-zinc-400">
-              {t.skillsIntro}
-            </p>
+            <p className="max-w-xl leading-7 text-zinc-400">{t.skillsIntro}</p>
           </div>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -980,9 +982,7 @@ export default function Home() {
                         {meta.branch}
                       </p>
 
-                      <h3 className="mt-3 text-2xl font-black">
-                        {skill.name}
-                      </h3>
+                      <h3 className="mt-3 text-2xl font-black">{skill.name}</h3>
                     </div>
 
                     <span className="rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-3 py-1 text-xs text-fuchsia-100">

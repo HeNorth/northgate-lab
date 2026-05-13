@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Lang = "zh" | "en";
@@ -148,12 +149,12 @@ export default function TravelPlannerPage() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-12">
         <div className="flex items-center justify-between gap-4">
-          <a
-            href="../../"
+          <link
+            href="/"
             className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 transition hover:bg-white/10 hover:text-white"
           >
             {t.back}
-          </a>
+          </link>
 
           <button
             type="button"
@@ -167,7 +168,7 @@ export default function TravelPlannerPage() {
         <section className="pt-16">
           <p className="font-mono text-sm text-cyan-300">{t.caseCode}</p>
 
-          <h1 className="mt-4 bg-gradient-to-r from-cyan-300 via-fuchsia-300 to-lime-300 bg-clip-text text-5xl font-black tracking-tight text-transparent md:text-7xl">
+          <h1 className="mt-4 bg-linear-to-r from-cyan-300 via-fuchsia-300 to-lime-300 bg-clip-text text-5xl font-black tracking-tight text-transparent md:text-7xl">
             {t.title}
           </h1>
 
@@ -256,12 +257,12 @@ export default function TravelPlannerPage() {
             {t.endDesc}
           </p>
 
-          <a
-            href="../../#projects"
+          <link
+            href="/#projects"
             className="mt-8 inline-flex rounded-2xl bg-white px-6 py-4 font-semibold text-black transition hover:bg-zinc-200"
           >
             {t.backProjects}
-          </a>
+          </link>
         </section>
       </div>
     </main>

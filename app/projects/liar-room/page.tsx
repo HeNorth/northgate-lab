@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Lang = "zh" | "en";
@@ -150,12 +151,12 @@ export default function LiarRoomPage() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-12">
         {/* 顶部操作区 */}
         <div className="flex items-center justify-between gap-4">
-          <a
-            href="../../"
+          <link
+            href="/"
             className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 transition hover:bg-white/10 hover:text-white"
           >
             {t.back}
-          </a>
+          </link>
 
           <button
             type="button"
@@ -263,12 +264,12 @@ export default function LiarRoomPage() {
             {t.endDesc}
           </p>
 
-          <a
-            href="../../#projects"
+          <link
+            href="/#projects"
             className="mt-8 inline-flex rounded-2xl bg-white px-6 py-4 font-semibold text-black transition hover:bg-zinc-200"
           >
             {t.backProjects}
-          </a>
+          </link>
         </section>
       </div>
     </main>

@@ -5,6 +5,12 @@ import { useState } from "react";
 
 type Lang = "zh" | "en";
 
+const projectLinks = [
+  "/projects/liar-room",
+  "/projects/mard-bead-generator",
+  "/projects/travel-planner",
+];
+
 const content = {
   zh: {
     nav: [
@@ -332,12 +338,6 @@ const content = {
   },
 };
 
-const projectLinks = [
-  "/projects/liar-room",
-  "/projects/mard-bead-generator",
-  "/projects/travel-planner",
-];
-
 export default function Home() {
   const [lang, setLang] = useState<Lang>("zh");
   const t = content[lang];
@@ -449,8 +449,7 @@ export default function Home() {
             status: "UNLOCKED",
             role: "Product Planning / Interaction",
             progress: 42,
-            recommend:
-              "Requirement Analysis / Travel Planning / AI Interaction",
+            recommend: "Requirement Analysis / Travel Planning / AI Interaction",
             reward: "Product prototype design EXP",
             tags: [
               "Travel Planning",
@@ -602,13 +601,11 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      {/* 背景光晕 */}
       <div className="pointer-events-none fixed left-10 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="pointer-events-none fixed right-10 top-20 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" />
       <div className="pointer-events-none fixed bottom-0 left-1/3 h-96 w-96 rounded-full bg-lime-500/10 blur-3xl" />
 
       <div className="relative z-10">
-        {/* 顶部导航栏 */}
         <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <a href="#home" className="font-bold tracking-wide text-cyan-300">
@@ -617,11 +614,7 @@ export default function Home() {
 
             <nav className="hidden gap-6 text-sm text-zinc-300 md:flex">
               {t.nav.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="hover:text-white"
-                >
+                <a key={item.href} href={item.href} className="hover:text-white">
                   {item.label}
                 </a>
               ))}
@@ -637,7 +630,6 @@ export default function Home() {
           </div>
         </header>
 
-        {/* 首页第一屏 */}
         <section
           id="home"
           className="mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-6 pb-20 pt-32 lg:grid-cols-2"
@@ -684,7 +676,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 右侧游戏档案面板 */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl shadow-cyan-950/40 backdrop-blur">
             <div className="rounded-3xl border border-white/10 bg-black/40 p-5">
               <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
@@ -753,7 +744,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 玩家档案 */}
         <section id="profile" className="mx-auto max-w-7xl px-6 py-24">
           <p className="font-mono text-sm text-cyan-300">{t.profileSub}</p>
           <h2 className="mt-3 text-4xl font-black">{t.profileTitle}</h2>
@@ -776,7 +766,9 @@ export default function Home() {
                     : "Game Developer / 3D Modeler"}
                 </p>
 
-                <p className="mt-6 leading-8 text-zinc-300">{t.profileIntro}</p>
+                <p className="mt-6 leading-8 text-zinc-300">
+                  {t.profileIntro}
+                </p>
 
                 <div className="mt-8 space-y-3">
                   {t.profileItems.map((item) => (
@@ -832,11 +824,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 项目副本 */}
         <section id="projects" className="mx-auto max-w-7xl px-6 py-24">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="font-mono text-sm text-cyan-300">{t.projectsSub}</p>
+              <p className="font-mono text-sm text-cyan-300">
+                {t.projectsSub}
+              </p>
               <h2 className="mt-3 text-4xl font-black">{t.projectsTitle}</h2>
             </div>
 
@@ -873,7 +866,9 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <p className="mt-4 text-sm text-zinc-400">{project.type}</p>
+                    <p className="mt-4 text-sm text-zinc-400">
+                      {project.type}
+                    </p>
 
                     <p className="mt-4 min-h-28 leading-7 text-zinc-300">
                       {project.desc}
@@ -954,7 +949,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 技能树 */}
         <section id="skills" className="mx-auto max-w-7xl px-6 py-24">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -964,7 +958,9 @@ export default function Home() {
               <h2 className="mt-3 text-4xl font-black">{t.skillsTitle}</h2>
             </div>
 
-            <p className="max-w-xl leading-7 text-zinc-400">{t.skillsIntro}</p>
+            <p className="max-w-xl leading-7 text-zinc-400">
+              {t.skillsIntro}
+            </p>
           </div>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -982,7 +978,9 @@ export default function Home() {
                         {meta.branch}
                       </p>
 
-                      <h3 className="mt-3 text-2xl font-black">{skill.name}</h3>
+                      <h3 className="mt-3 text-2xl font-black">
+                        {skill.name}
+                      </h3>
                     </div>
 
                     <span className="rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-3 py-1 text-xs text-fuchsia-100">
@@ -1026,7 +1024,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 任务日志 */}
         <section id="timeline" className="mx-auto max-w-7xl px-6 py-24">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -1040,7 +1037,6 @@ export default function Home() {
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            {/* 主线任务 */}
             <div className="rounded-3xl border border-lime-400/20 bg-lime-400/5 p-6">
               <div className="flex items-center justify-between gap-4">
                 <h3 className="text-2xl font-black text-lime-200">
@@ -1086,7 +1082,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 支线任务 */}
             <div className="rounded-3xl border border-cyan-400/20 bg-cyan-400/5 p-6">
               <div className="flex items-center justify-between gap-4">
                 <h3 className="text-2xl font-black text-cyan-200">
@@ -1134,7 +1129,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 联系区域 */}
         <section id="contact" className="mx-auto max-w-7xl px-6 py-24">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
             <p className="font-mono text-sm text-cyan-300">{t.contactSub}</p>
@@ -1166,7 +1160,7 @@ export default function Home() {
                           ? "noreferrer"
                           : undefined
                       }
-                      className="mt-2 block wrap-break-word text-lg font-bold text-cyan-200 hover:text-cyan-100"
+                      className="mt-2 block break-words text-lg font-bold text-cyan-200 hover:text-cyan-100"
                     >
                       {contact.value}
                     </a>

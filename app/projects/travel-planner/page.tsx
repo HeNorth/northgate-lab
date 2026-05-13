@@ -9,7 +9,7 @@ const content = {
   zh: {
     back: "← 返回 NorthGate Lab",
     langButton: "EN",
-    caseCode: "CASE-03 / PROJECT FILE",
+    caseCode: "CASE-03 / MISSION BRIEFING",
     title: "旅途小程序",
     subtitle: "小程序 / 旅行规划 / 产品设计 / AI 交互",
     intro:
@@ -17,7 +17,7 @@ const content = {
 
     cards: [
       {
-        label: "PROJECT STATUS",
+        label: "MISSION STATUS",
         title: "产品概念设计",
         desc: "目前处于产品构想与功能规划阶段，后续可以继续推进为网页原型或微信小程序。",
       },
@@ -74,7 +74,7 @@ const content = {
   en: {
     back: "← Back to NorthGate Lab",
     langButton: "中文",
-    caseCode: "CASE-03 / PROJECT FILE",
+    caseCode: "CASE-03 / MISSION BRIEFING",
     title: "Travel Planner",
     subtitle: "Mini Program / Travel Planning / Product Design / AI Interaction",
     intro:
@@ -82,7 +82,7 @@ const content = {
 
     cards: [
       {
-        label: "PROJECT STATUS",
+        label: "MISSION STATUS",
         title: "Product Concept",
         desc: "Currently in the product concept and feature planning stage. It can later be developed into a web prototype or a WeChat mini program.",
       },
@@ -149,12 +149,12 @@ export default function TravelPlannerPage() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-12">
         <div className="flex items-center justify-between gap-4">
-          <link
+          <Link
             href="/"
             className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 transition hover:bg-white/10 hover:text-white"
           >
             {t.back}
-          </link>
+          </Link>
 
           <button
             type="button"
@@ -257,12 +257,12 @@ export default function TravelPlannerPage() {
             {t.endDesc}
           </p>
 
-          <link
+          <Link
             href="/#projects"
             className="mt-8 inline-flex rounded-2xl bg-white px-6 py-4 font-semibold text-black transition hover:bg-zinc-200"
           >
             {t.backProjects}
-          </link>
+          </Link>
         </section>
       </div>
     </main>

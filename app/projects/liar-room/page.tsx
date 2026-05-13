@@ -9,7 +9,7 @@ const content = {
   zh: {
     back: "← 返回 NorthGate Lab",
     langButton: "EN",
-    caseCode: "CASE-01 / PROJECT FILE",
+    caseCode: "CASE-01 / MISSION BRIEFING",
     title: "谎言密室",
     subtitle: "Unity / 推理解谜 / 搜证质问 / 剧情反转",
     intro:
@@ -17,7 +17,7 @@ const content = {
 
     statusCards: [
       {
-        label: "PROJECT STATUS",
+        label: "MISSION STATUS",
         title: "可做成试玩 Demo",
         desc: "当前已具备核心玩法方向，后续可以继续制作 Unity WebGL 试玩版本。",
       },
@@ -74,7 +74,7 @@ const content = {
   en: {
     back: "← Back to NorthGate Lab",
     langButton: "中文",
-    caseCode: "CASE-01 / PROJECT FILE",
+    caseCode: "CASE-01 / MISSION BRIEFING",
     title: "Liar Room",
     subtitle: "Unity / Mystery Puzzle / Investigation / Narrative Twist",
     intro:
@@ -82,7 +82,7 @@ const content = {
 
     statusCards: [
       {
-        label: "PROJECT STATUS",
+        label: "MISSION STATUS",
         title: "Playable Demo Direction",
         desc: "The core gameplay direction is already defined, and the next step is to build a Unity WebGL playable prototype.",
       },
@@ -143,20 +143,18 @@ export default function LiarRoomPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      {/* 背景光晕 */}
       <div className="pointer-events-none fixed left-10 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="pointer-events-none fixed right-10 top-20 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" />
       <div className="pointer-events-none fixed bottom-0 left-1/3 h-96 w-96 rounded-full bg-lime-500/10 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-12">
-        {/* 顶部操作区 */}
         <div className="flex items-center justify-between gap-4">
-          <link
+          <Link
             href="/"
             className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 transition hover:bg-white/10 hover:text-white"
           >
             {t.back}
-          </link>
+          </Link>
 
           <button
             type="button"
@@ -167,7 +165,6 @@ export default function LiarRoomPage() {
           </button>
         </div>
 
-        {/* 项目头部 */}
         <section className="pt-16">
           <p className="font-mono text-sm text-cyan-300">{t.caseCode}</p>
 
@@ -182,7 +179,6 @@ export default function LiarRoomPage() {
           </p>
         </section>
 
-        {/* 项目状态卡片 */}
         <section className="mt-12 grid gap-5 md:grid-cols-3">
           {t.statusCards.map((card, index) => {
             const cardStyle =
@@ -216,7 +212,6 @@ export default function LiarRoomPage() {
           })}
         </section>
 
-        {/* 玩法设计 */}
         <section className="mt-16">
           <p className="font-mono text-sm text-cyan-300">{t.gameplaySub}</p>
           <h2 className="mt-3 text-4xl font-black">{t.gameplayTitle}</h2>
@@ -234,7 +229,6 @@ export default function LiarRoomPage() {
           </div>
         </section>
 
-        {/* 开发计划 */}
         <section className="mt-16">
           <p className="font-mono text-sm text-lime-300">{t.planSub}</p>
           <h2 className="mt-3 text-4xl font-black">{t.planTitle}</h2>
@@ -255,7 +249,6 @@ export default function LiarRoomPage() {
           </div>
         </section>
 
-        {/* 底部 CTA */}
         <section className="mt-16 rounded-3xl border border-white/10 bg-white/5 p-8">
           <p className="font-mono text-sm text-fuchsia-300">{t.endSub}</p>
           <h2 className="mt-3 text-3xl font-black">{t.endTitle}</h2>
@@ -264,12 +257,12 @@ export default function LiarRoomPage() {
             {t.endDesc}
           </p>
 
-          <link
+          <Link
             href="/#projects"
             className="mt-8 inline-flex rounded-2xl bg-white px-6 py-4 font-semibold text-black transition hover:bg-zinc-200"
           >
             {t.backProjects}
-          </link>
+          </Link>
         </section>
       </div>
     </main>

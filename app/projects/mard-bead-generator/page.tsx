@@ -8,147 +8,145 @@ const content = {
   zh: {
     back: "← 返回 NorthGate Lab",
     langButton: "EN",
-    caseCode: "CASE-01 / PROJECT FILE",
-    title: "谎言密室",
-    subtitle: "Unity / 推理解谜 / 搜证质问 / 剧情反转",
+    caseCode: "CASE-02 / PROJECT FILE",
+    title: "MARD 拼豆图纸生成器",
+    subtitle: "Next.js / 网页工具 / 图像处理 / 色卡映射",
     intro:
-      "《谎言密室》是一个以“搜证、质问、谎言识别、真相反转”为核心的推理解谜项目。玩家需要在有限信息中寻找矛盾点，通过证据链拆穿角色的谎言，并逐步还原事件真相。",
+      "MARD 拼豆图纸生成器是一个面向拼豆创作者的网页工具。它的目标是把图片转换成可制作的拼豆图纸，并根据不同色卡数量生成更适合实际材料的方案。当前页面为项目档案占位，后续会继续补充功能截图、技术细节和使用流程。",
 
-    statusCards: [
+    cards: [
       {
         label: "PROJECT STATUS",
-        title: "可做成试玩 Demo",
-        desc: "当前已具备核心玩法方向，后续可以继续制作 Unity WebGL 试玩版本。",
+        title: "功能验证完成",
+        desc: "核心方向已经验证：图片上传、裁剪、像素化、颜色映射和图纸生成。",
       },
       {
         label: "MY ROLE",
-        title: "玩法 / 系统 / 剧情",
-        desc: "负责案件结构、玩家流程、线索逻辑、NPC 谎言和交互设计。",
+        title: "网页工具 / 图像处理",
+        desc: "负责产品流程、页面交互、图像处理逻辑和色卡映射设计。",
       },
       {
-        label: "CORE LOOP",
-        title: "发现 → 质问 → 反转",
-        desc: "玩家通过调查场景获得证据，再用证据突破 NPC 的说法。",
+        label: "CORE VALUE",
+        title: "让图片变成可制作图纸",
+        desc: "帮助用户根据已有颜色数量生成更适合实际制作的拼豆图纸。",
       },
     ],
 
-    gameplaySub: "GAMEPLAY DESIGN",
-    gameplayTitle: "玩法设计",
-    gameplayItems: [
+    designSub: "TOOL DESIGN",
+    designTitle: "工具设计",
+    designItems: [
       {
-        title: "搜证系统",
-        desc: "玩家在场景中点击、检查、收集关键物品和信息。每条线索都不是孤立存在，而是服务于后续质问和推理。",
+        title: "图片上传与裁剪",
+        desc: "用户上传图片后，可以先选择想要保留的主体区域，再进入图纸生成流程。",
       },
       {
-        title: "质问系统",
-        desc: "NPC 的证言中会存在漏洞。玩家需要选择正确证据进行反驳，推动剧情进入下一阶段。",
+        title: "像素化处理",
+        desc: "将原图转换成适合拼豆制作的像素图，降低细节复杂度，提高可制作性。",
       },
       {
-        title: "谎言识别",
-        desc: "不直接告诉玩家谁在说谎，而是通过矛盾信息、时间线错位、行为异常让玩家自己判断。",
+        title: "色卡映射",
+        desc: "根据用户选择的 MARD 色卡数量，将图片颜色映射到实际可用颜色。",
       },
       {
-        title: "真相反转",
-        desc: "案件表层真相和最终真相不同。玩家需要经历一次认知翻转，获得“我推出来了”的成就感。",
+        title: "图纸与统计",
+        desc: "后续计划输出图纸预览、颜色统计、用量估算和制作辅助信息。",
       },
     ],
 
     planSub: "NEXT BUILD PLAN",
-    planTitle: "下一阶段开发计划",
+    planTitle: "下一阶段补充内容",
     planItems: [
-      "完成第一案完整剧情流程。",
-      "制作 Unity 2D 横版探索场景。",
-      "实现基础搜证与证据背包。",
-      "实现 NPC 对话与质问分支。",
-      "导出 WebGL 试玩版本并嵌入作品集网站。",
+      "补充工具页面截图。",
+      "整理图片处理流程图。",
+      "展示 24 / 48 / 72 / 96 / 120 / 144 / 168 / 192 色卡模式。",
+      "补充图纸导出和颜色统计说明。",
+      "记录开发过程和技术难点。",
     ],
 
-    endSub: "CASE FILE END",
-    endTitle: "这个副本还在继续开发中",
+    endSub: "CASE FILE PENDING",
+    endTitle: "这个工具档案还会继续完善",
     endDesc:
-      "后续我会把试玩 Demo、场景截图、角色设定、流程图和开发日志继续补充到这个页面。",
+      "后续会补充真实截图、功能演示、技术实现说明，以及可以直接访问的在线工具链接。",
     backProjects: "返回项目副本",
   },
 
   en: {
     back: "← Back to NorthGate Lab",
     langButton: "中文",
-    caseCode: "CASE-01 / PROJECT FILE",
-    title: "Liar Room",
-    subtitle: "Unity / Mystery Puzzle / Investigation / Narrative Twist",
+    caseCode: "CASE-02 / PROJECT FILE",
+    title: "MARD Bead Pattern Generator",
+    subtitle: "Next.js / Web Tool / Image Processing / Palette Mapping",
     intro:
-      "Liar Room is a mystery puzzle project built around investigation, questioning, lie detection, and narrative twists. Players search for contradictions in limited information, use evidence to break false statements, and gradually reconstruct the truth behind the case.",
+      "MARD Bead Pattern Generator is a web tool designed for bead art creators. Its goal is to convert images into usable bead patterns and generate practical results based on different palette sizes. This page is currently a project file placeholder and will later include screenshots, technical details, and usage flow.",
 
-    statusCards: [
+    cards: [
       {
         label: "PROJECT STATUS",
-        title: "Playable Demo Direction",
-        desc: "The core gameplay direction is already defined, and the next step is to build a Unity WebGL playable prototype.",
+        title: "Feature Prototype Done",
+        desc: "The core direction has been validated: image upload, cropping, pixelation, palette mapping, and pattern generation.",
       },
       {
         label: "MY ROLE",
-        title: "Gameplay / System / Narrative",
-        desc: "Responsible for case structure, player flow, clue logic, NPC lies, and interaction design.",
+        title: "Web Tool / Image Processing",
+        desc: "Responsible for product flow, page interaction, image processing logic, and palette mapping design.",
       },
       {
-        label: "CORE LOOP",
-        title: "Discover → Question → Twist",
-        desc: "Players investigate scenes to collect evidence, then use that evidence to challenge NPC statements.",
+        label: "CORE VALUE",
+        title: "Turn Images into Makeable Patterns",
+        desc: "Helps users generate bead patterns that better match their available colors and materials.",
       },
     ],
 
-    gameplaySub: "GAMEPLAY DESIGN",
-    gameplayTitle: "Gameplay Design",
-    gameplayItems: [
+    designSub: "TOOL DESIGN",
+    designTitle: "Tool Design",
+    designItems: [
       {
-        title: "Investigation System",
-        desc: "Players click, inspect, and collect important objects and information in the scene. Each clue supports later questioning and reasoning instead of existing in isolation.",
+        title: "Image Upload and Cropping",
+        desc: "Users can upload an image and select the main area before entering the pattern generation process.",
       },
       {
-        title: "Questioning System",
-        desc: "NPC statements contain logical gaps. Players need to choose the correct evidence to refute them and push the story forward.",
+        title: "Pixelation",
+        desc: "The original image is converted into a pixel-style pattern suitable for bead art production.",
       },
       {
-        title: "Lie Detection",
-        desc: "The game does not directly tell players who is lying. Instead, contradictions, timeline gaps, and unusual behaviors guide the player to make judgments.",
+        title: "Palette Mapping",
+        desc: "Image colors are mapped to actual available MARD palette colors based on the selected palette size.",
       },
       {
-        title: "Truth Twist",
-        desc: "The surface truth and the final truth are different. The goal is to give players the satisfaction of reaching the answer through their own reasoning.",
+        title: "Pattern and Statistics",
+        desc: "Future versions may include pattern previews, color statistics, material estimates, and production support.",
       },
     ],
 
     planSub: "NEXT BUILD PLAN",
-    planTitle: "Next Build Plan",
+    planTitle: "Next Content Updates",
     planItems: [
-      "Complete the full narrative flow of the first case.",
-      "Create a Unity 2D side-scrolling exploration scene.",
-      "Build the basic investigation and evidence inventory system.",
-      "Implement NPC dialogue and questioning branches.",
-      "Export a Unity WebGL playable demo and embed it into the portfolio.",
+      "Add screenshots of the tool interface.",
+      "Document the image processing flow.",
+      "Show 24 / 48 / 72 / 96 / 120 / 144 / 168 / 192 palette modes.",
+      "Explain pattern export and color statistics.",
+      "Record development notes and technical challenges.",
     ],
 
-    endSub: "CASE FILE END",
-    endTitle: "This case file is still under development",
+    endSub: "CASE FILE PENDING",
+    endTitle: "This tool file will be expanded later",
     endDesc:
-      "Playable demos, scene screenshots, character settings, flowcharts, and development logs will be added to this page later.",
+      "Screenshots, feature demos, technical notes, and the online tool link will be added to this page later.",
     backProjects: "Back to Case Files",
   },
 };
 
-export default function LiarRoomPage() {
+export default function MardBeadGeneratorPage() {
   const [lang, setLang] = useState<Lang>("zh");
   const t = content[lang];
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      {/* 背景光晕 */}
       <div className="pointer-events-none fixed left-10 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="pointer-events-none fixed right-10 top-20 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" />
       <div className="pointer-events-none fixed bottom-0 left-1/3 h-96 w-96 rounded-full bg-lime-500/10 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-12">
-        {/* 顶部操作区 */}
         <div className="flex items-center justify-between gap-4">
           <a
             href="../../"
@@ -166,7 +164,6 @@ export default function LiarRoomPage() {
           </button>
         </div>
 
-        {/* 项目头部 */}
         <section className="pt-16">
           <p className="font-mono text-sm text-cyan-300">{t.caseCode}</p>
 
@@ -181,9 +178,8 @@ export default function LiarRoomPage() {
           </p>
         </section>
 
-        {/* 项目状态卡片 */}
         <section className="mt-12 grid gap-5 md:grid-cols-3">
-          {t.statusCards.map((card, index) => {
+          {t.cards.map((card, index) => {
             const cardStyle =
               index === 0
                 ? "border-cyan-400/20 bg-cyan-400/10"
@@ -215,13 +211,12 @@ export default function LiarRoomPage() {
           })}
         </section>
 
-        {/* 玩法设计 */}
         <section className="mt-16">
-          <p className="font-mono text-sm text-cyan-300">{t.gameplaySub}</p>
-          <h2 className="mt-3 text-4xl font-black">{t.gameplayTitle}</h2>
+          <p className="font-mono text-sm text-cyan-300">{t.designSub}</p>
+          <h2 className="mt-3 text-4xl font-black">{t.designTitle}</h2>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {t.gameplayItems.map((item) => (
+            {t.designItems.map((item) => (
               <div
                 key={item.title}
                 className="rounded-3xl border border-white/10 bg-white/5 p-6"
@@ -233,7 +228,6 @@ export default function LiarRoomPage() {
           </div>
         </section>
 
-        {/* 开发计划 */}
         <section className="mt-16">
           <p className="font-mono text-sm text-lime-300">{t.planSub}</p>
           <h2 className="mt-3 text-4xl font-black">{t.planTitle}</h2>
@@ -254,7 +248,6 @@ export default function LiarRoomPage() {
           </div>
         </section>
 
-        {/* 底部 CTA */}
         <section className="mt-16 rounded-3xl border border-white/10 bg-white/5 p-8">
           <p className="font-mono text-sm text-fuchsia-300">{t.endSub}</p>
           <h2 className="mt-3 text-3xl font-black">{t.endTitle}</h2>

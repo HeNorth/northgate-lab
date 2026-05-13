@@ -75,7 +75,10 @@ const content = {
       { name: "Tailwind CSS", desc: "快速搭建现代化、响应式 UI。" },
       { name: "3ds Max", desc: "3D 建模、场景资产、硬表面建模。" },
       { name: "ZBrush", desc: "角色雕刻、造型设计、模型细节塑造。" },
-      { name: "Game UI / Planning", desc: "游戏界面、玩法循环、任务结构和用户体验。" },
+      {
+        name: "Game UI / Planning",
+        desc: "游戏界面、玩法循环、任务结构和用户体验。",
+      },
     ],
 
     timelineTitle: "任务日志",
@@ -217,14 +220,38 @@ const content = {
     skillsIntro:
       "This skill tree shows not only the tools I use, but also how each skill supports game development, modeling, web tools, and product design.",
     skills: [
-      { name: "Unity", desc: "2D / 3D prototypes, gameplay validation, and WebGL presentation." },
-      { name: "C#", desc: "Gameplay logic, interaction systems, and basic tool development." },
-      { name: "Next.js", desc: "Portfolio websites, web tools, and interactive interfaces." },
-      { name: "TypeScript", desc: "More reliable frontend development and data structures." },
-      { name: "Tailwind CSS", desc: "Fast and responsive modern UI building." },
-      { name: "3ds Max", desc: "3D modeling, environment assets, and hard-surface modeling." },
-      { name: "ZBrush", desc: "Character sculpting, shape design, and model detailing." },
-      { name: "Game UI / Planning", desc: "Game interface design, gameplay loops, quest structures, and player experience." },
+      {
+        name: "Unity",
+        desc: "2D / 3D prototypes, gameplay validation, and WebGL presentation.",
+      },
+      {
+        name: "C#",
+        desc: "Gameplay logic, interaction systems, and basic tool development.",
+      },
+      {
+        name: "Next.js",
+        desc: "Portfolio websites, web tools, and interactive interfaces.",
+      },
+      {
+        name: "TypeScript",
+        desc: "More reliable frontend development and data structures.",
+      },
+      {
+        name: "Tailwind CSS",
+        desc: "Fast and responsive modern UI building.",
+      },
+      {
+        name: "3ds Max",
+        desc: "3D modeling, environment assets, and hard-surface modeling.",
+      },
+      {
+        name: "ZBrush",
+        desc: "Character sculpting, shape design, and model detailing.",
+      },
+      {
+        name: "Game UI / Planning",
+        desc: "Game interface design, gameplay loops, quest structures, and player experience.",
+      },
     ],
 
     timelineTitle: "Quest Chronicle",
@@ -393,38 +420,128 @@ export default function Home() {
             status: "Feature Prototype Done",
             role: "Web Tool / Image Processing",
             progress: 76,
-            tags: ["Next.js", "Image Processing", "Palette Mapping", "Tool Product"],
+            tags: [
+              "Next.js",
+              "Image Processing",
+              "Palette Mapping",
+              "Tool Product",
+            ],
           },
           {
             code: "CASE-03",
             status: "Product Concept",
             role: "Product Planning / Interaction",
             progress: 42,
-            tags: ["Travel Planning", "Mini Program", "Pain Points", "AI Interaction"],
+            tags: [
+              "Travel Planning",
+              "Mini Program",
+              "Pain Points",
+              "AI Interaction",
+            ],
           },
         ];
 
   const skillMeta =
     lang === "zh"
       ? [
-          { branch: "开发分支", level: "Lv. 7", progress: 70, tags: ["玩法原型", "WebGL", "2D/3D"] },
-          { branch: "代码分支", level: "Lv. 6", progress: 62, tags: ["游戏逻辑", "交互系统", "工具脚本"] },
-          { branch: "网页分支", level: "Lv. 6", progress: 65, tags: ["作品集", "网页工具", "产品页面"] },
-          { branch: "工程分支", level: "Lv. 5", progress: 55, tags: ["类型安全", "数据结构", "组件开发"] },
-          { branch: "UI 分支", level: "Lv. 6", progress: 66, tags: ["响应式", "视觉系统", "快速搭建"] },
-          { branch: "建模分支", level: "Lv. 6", progress: 64, tags: ["场景资产", "硬表面", "模型制作"] },
-          { branch: "雕刻分支", level: "Lv. 5", progress: 58, tags: ["角色雕刻", "造型", "细节塑造"] },
-          { branch: "设计分支", level: "Lv. 7", progress: 72, tags: ["游戏 UI", "玩法循环", "任务结构"] },
+          {
+            branch: "开发分支",
+            level: "Lv. 7",
+            progress: 70,
+            tags: ["玩法原型", "WebGL", "2D/3D"],
+          },
+          {
+            branch: "代码分支",
+            level: "Lv. 6",
+            progress: 62,
+            tags: ["游戏逻辑", "交互系统", "工具脚本"],
+          },
+          {
+            branch: "网页分支",
+            level: "Lv. 6",
+            progress: 65,
+            tags: ["作品集", "网页工具", "产品页面"],
+          },
+          {
+            branch: "工程分支",
+            level: "Lv. 5",
+            progress: 55,
+            tags: ["类型安全", "数据结构", "组件开发"],
+          },
+          {
+            branch: "UI 分支",
+            level: "Lv. 6",
+            progress: 66,
+            tags: ["响应式", "视觉系统", "快速搭建"],
+          },
+          {
+            branch: "建模分支",
+            level: "Lv. 6",
+            progress: 64,
+            tags: ["场景资产", "硬表面", "模型制作"],
+          },
+          {
+            branch: "雕刻分支",
+            level: "Lv. 5",
+            progress: 58,
+            tags: ["角色雕刻", "造型", "细节塑造"],
+          },
+          {
+            branch: "设计分支",
+            level: "Lv. 7",
+            progress: 72,
+            tags: ["游戏 UI", "玩法循环", "任务结构"],
+          },
         ]
       : [
-          { branch: "Dev Branch", level: "Lv. 7", progress: 70, tags: ["Prototype", "WebGL", "2D/3D"] },
-          { branch: "Code Branch", level: "Lv. 6", progress: 62, tags: ["Game Logic", "Interaction", "Tool Scripts"] },
-          { branch: "Web Branch", level: "Lv. 6", progress: 65, tags: ["Portfolio", "Web Tools", "Product Pages"] },
-          { branch: "Engineering", level: "Lv. 5", progress: 55, tags: ["Type Safety", "Data", "Components"] },
-          { branch: "UI Branch", level: "Lv. 6", progress: 66, tags: ["Responsive", "Visual System", "Fast Build"] },
-          { branch: "Modeling", level: "Lv. 6", progress: 64, tags: ["Assets", "Hard Surface", "Modeling"] },
-          { branch: "Sculpting", level: "Lv. 5", progress: 58, tags: ["Character", "Shape", "Details"] },
-          { branch: "Design Branch", level: "Lv. 7", progress: 72, tags: ["Game UI", "Game Loop", "Quest Design"] },
+          {
+            branch: "Dev Branch",
+            level: "Lv. 7",
+            progress: 70,
+            tags: ["Prototype", "WebGL", "2D/3D"],
+          },
+          {
+            branch: "Code Branch",
+            level: "Lv. 6",
+            progress: 62,
+            tags: ["Game Logic", "Interaction", "Tool Scripts"],
+          },
+          {
+            branch: "Web Branch",
+            level: "Lv. 6",
+            progress: 65,
+            tags: ["Portfolio", "Web Tools", "Product Pages"],
+          },
+          {
+            branch: "Engineering",
+            level: "Lv. 5",
+            progress: 55,
+            tags: ["Type Safety", "Data", "Components"],
+          },
+          {
+            branch: "UI Branch",
+            level: "Lv. 6",
+            progress: 66,
+            tags: ["Responsive", "Visual System", "Fast Build"],
+          },
+          {
+            branch: "Modeling",
+            level: "Lv. 6",
+            progress: 64,
+            tags: ["Assets", "Hard Surface", "Modeling"],
+          },
+          {
+            branch: "Sculpting",
+            level: "Lv. 5",
+            progress: 58,
+            tags: ["Character", "Shape", "Details"],
+          },
+          {
+            branch: "Design Branch",
+            level: "Lv. 7",
+            progress: 72,
+            tags: ["Game UI", "Game Loop", "Quest Design"],
+          },
         ];
 
   const mainQuestMeta =
@@ -437,7 +554,11 @@ export default function Home() {
       : [
           { code: "MAIN-01", status: "Route Reset", badge: "Completed" },
           { code: "MAIN-02", status: "Academic Node", badge: "Completed" },
-          { code: "FINAL QUEST", status: "Long-Term Goal", badge: "Future Goal" },
+          {
+            code: "FINAL QUEST",
+            status: "Long-Term Goal",
+            badge: "Future Goal",
+          },
         ];
 
   const sideQuestMeta =
@@ -768,12 +889,21 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6">
-                      <button
-                        type="button"
-                        className="w-full rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3 font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
-                      >
-                        {lang === "zh" ? "打开副本档案" : "Open Case File"}
-                      </button>
+                      {index === 0 ? (
+                        <a
+                          href="projects/liar-room"
+                          className="block w-full rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3 text-center font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
+                        >
+                          {lang === "zh" ? "打开副本档案" : "Open Case File"}
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 font-semibold text-zinc-400"
+                        >
+                          {lang === "zh" ? "档案整理中" : "File Pending"}
+                        </button>
+                      )}
                     </div>
                   </div>
                 </article>

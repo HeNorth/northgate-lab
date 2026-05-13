@@ -14,13 +14,13 @@ const content = {
       { href: "#timeline", label: "任务日志" },
       { href: "#contact", label: "联络终端" },
     ],
-    heroTag: "PLAYER PROFILE INITIALIZED",
+    heroTag: "NORTHGATE LAB ONLINE",
     title: "NorthGate Lab",
     subtitle: "Game Developer Portfolio / Interactive Resume",
     sloganEn: "Beyond the gate, every prototype becomes a world.",
     sloganZh: "门的彼端，每一个原型都将成为一个世界。",
-    enterButton: "进入实验室",
-    caseButton: "查看项目副本",
+    enterButton: "START GAME / 开始探索",
+    caseButton: "LOAD CASE FILES / 读取副本",
 
     profileTitle: "玩家档案",
     profileSub: "PLAYER PROFILE",
@@ -42,7 +42,7 @@ const content = {
     ],
 
     projectsTitle: "项目副本",
-    projectsSub: "CASE FILES",
+    projectsSub: "CASE FILES / LEVEL SELECT",
     projectsIntro:
       "这里不是普通作品列表，而是我的项目副本库：每个副本都记录一个想法如何被拆解、验证，并推进成可以体验的作品。",
     projects: [
@@ -166,13 +166,13 @@ const content = {
       { href: "#timeline", label: "Quest Log" },
       { href: "#contact", label: "Contact" },
     ],
-    heroTag: "PLAYER PROFILE INITIALIZED",
+    heroTag: "NORTHGATE LAB ONLINE",
     title: "NorthGate Lab",
     subtitle: "Game Developer Portfolio / Interactive Resume",
     sloganEn: "Beyond the gate, every prototype becomes a world.",
     sloganZh: "Every prototype is a step toward a playable world.",
-    enterButton: "Enter the Lab",
-    caseButton: "View Case Files",
+    enterButton: "START GAME",
+    caseButton: "LOAD CASE FILES",
 
     profileTitle: "Player Profile",
     profileSub: "PLAYER PROFILE",
@@ -194,7 +194,7 @@ const content = {
     ],
 
     projectsTitle: "Case Files",
-    projectsSub: "PROJECT ARCHIVE",
+    projectsSub: "CASE FILES / LEVEL SELECT",
     projectsIntro:
       "This is not just a project list. It is a case archive showing how each idea is designed, tested, and pushed toward a playable experience.",
     projects: [
@@ -393,39 +393,49 @@ export default function Home() {
       ? [
           {
             code: "CASE-01",
-            status: "可做成试玩 Demo",
+            status: "UNLOCKED",
             role: "玩法 / 系统 / 剧情",
             progress: 68,
+            recommend: "观察 / 逻辑 / 质问",
+            reward: "剧情系统设计经验",
             tags: ["推理解谜", "搜证", "NPC 谎言", "剧情反转"],
           },
           {
             code: "CASE-02",
-            status: "功能验证完成",
+            status: "UNLOCKED",
             role: "网页工具 / 图像处理",
             progress: 76,
+            recommend: "工具思维 / 图像处理 / 产品拆解",
+            reward: "网页工具开发经验",
             tags: ["Next.js", "图像处理", "色卡映射", "工具产品"],
           },
           {
             code: "CASE-03",
-            status: "产品概念设计",
+            status: "UNLOCKED",
             role: "产品策划 / 交互设计",
             progress: 42,
+            recommend: "需求分析 / 旅行规划 / AI 交互",
+            reward: "产品原型设计经验",
             tags: ["旅行规划", "小程序", "用户痛点", "AI 交互"],
           },
         ]
       : [
           {
             code: "CASE-01",
-            status: "Playable Demo Ready",
+            status: "UNLOCKED",
             role: "Gameplay / System / Narrative",
             progress: 68,
+            recommend: "Observation / Logic / Questioning",
+            reward: "Narrative system design EXP",
             tags: ["Mystery", "Investigation", "NPC Lies", "Plot Twist"],
           },
           {
             code: "CASE-02",
-            status: "Feature Prototype Done",
+            status: "UNLOCKED",
             role: "Web Tool / Image Processing",
             progress: 76,
+            recommend: "Tool Thinking / Image Processing / Product Breakdown",
+            reward: "Web tool development EXP",
             tags: [
               "Next.js",
               "Image Processing",
@@ -435,9 +445,11 @@ export default function Home() {
           },
           {
             code: "CASE-03",
-            status: "Product Concept",
+            status: "UNLOCKED",
             role: "Product Planning / Interaction",
             progress: 42,
+            recommend: "Requirement Analysis / Travel Planning / AI Interaction",
+            reward: "Product prototype design EXP",
             tags: [
               "Travel Planning",
               "Mini Program",
@@ -629,6 +641,10 @@ export default function Home() {
               {t.heroTag}
             </div>
 
+            <p className="mb-4 font-mono text-sm tracking-widest text-zinc-500">
+              SYSTEM BOOTING... LAB INTERFACE READY
+            </p>
+
             <h1 className="bg-linear-to-r from-cyan-300 via-fuchsia-300 to-lime-300 bg-clip-text text-5xl font-black tracking-tight text-transparent md:text-7xl">
               {t.title}
             </h1>
@@ -673,7 +689,7 @@ export default function Home() {
                 </div>
 
                 <p className="font-mono text-xs text-zinc-500">
-                  /northgate/player-profile.exe
+                  /northgate/boot-sequence.exe
                 </p>
               </div>
 
@@ -711,16 +727,20 @@ export default function Home() {
 
               <div className="mt-4 rounded-2xl border border-white/10 bg-zinc-950/70 p-5 font-mono text-sm leading-7 text-zinc-300">
                 <p>
-                  <span className="text-cyan-300">SYSTEM:</span> Welcome to
-                  NorthGate Lab.
+                  <span className="text-cyan-300">BOOT:</span> Loading player
+                  profile...
                 </p>
                 <p>
-                  <span className="text-fuchsia-300">STATUS:</span> Portfolio
-                  initialized.
+                  <span className="text-fuchsia-300">SYSTEM:</span> NorthGate
+                  Lab online.
                 </p>
                 <p>
-                  <span className="text-lime-300">NEXT:</span> Add playable
-                  project files.
+                  <span className="text-lime-300">ACCESS:</span> Case files
+                  unlocked.
+                </p>
+                <p>
+                  <span className="text-cyan-300">NEXT:</span> Select a project
+                  dungeon.
                 </p>
               </div>
             </div>
@@ -868,6 +888,26 @@ export default function Home() {
                       </p>
                     </div>
 
+                    <div className="mt-4 grid gap-3">
+                      <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
+                        <p className="font-mono text-xs text-zinc-500">
+                          {lang === "zh" ? "RECOMMENDED SKILLS / 推荐能力" : "RECOMMENDED SKILLS"}
+                        </p>
+                        <p className="mt-2 text-sm font-semibold text-cyan-100">
+                          {meta.recommend}
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
+                        <p className="font-mono text-xs text-zinc-500">
+                          {lang === "zh" ? "DROP REWARD / 掉落奖励" : "DROP REWARD"}
+                        </p>
+                        <p className="mt-2 text-sm font-semibold text-lime-100">
+                          {meta.reward}
+                        </p>
+                      </div>
+                    </div>
+
                     <div className="mt-5">
                       <div className="mb-2 flex justify-between text-sm text-zinc-400">
                         <span>
@@ -900,7 +940,7 @@ export default function Home() {
                         href={detailLink}
                         className="block w-full rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3 text-center font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
                       >
-                        {lang === "zh" ? "打开副本档案" : "Open Case File"}
+                        {lang === "zh" ? "进入副本档案" : "Enter Case File"}
                       </a>
                     </div>
                   </div>
